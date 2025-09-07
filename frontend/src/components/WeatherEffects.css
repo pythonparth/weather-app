@@ -1,0 +1,59 @@
+@keyframes rainFall {
+  0% { transform: translateY(-100%); opacity: 0.5; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+@keyframes sunWink {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(10deg) scale(1.05); }
+}
+
+@keyframes cloudDrift {
+  0% { transform: translateX(-20px); }
+  50% { transform: translateX(20px); }
+  100% { transform: translateX(-20px); }
+}
+
+@keyframes starTwinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.rain-drop {
+  position: absolute;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.6);
+  animation: rainFall linear infinite;
+}
+
+.sun-wink {
+  animation: sunWink 2s ease-in-out infinite;
+}
+
+.cloud {
+  position: absolute;
+  fill: white;
+  animation: cloudDrift 12s ease-in-out infinite;
+}
+
+.cloud1 {
+  top: 20%;
+  left: 10%;
+  width: 120px;
+}
+
+.cloud2 {
+  top: 40%;
+  left: 60%;
+  width: 100px;
+  animation-duration: 18s;
+}
+
+.star-twinkle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: starTwinkle 2s ease-in-out infinite;
+}
